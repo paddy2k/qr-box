@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>QR Box - Prefrences</title>
+		
+		<style>
+		
+		#wrapper {
+		  margin: 2em auto;
+		  width: 500px;
+		  background-image: url(images/gradient.png);
+		  padding: 1em;
+		  border-radius: 20px;
+		  box-shadow: 6px 6px 7px #89a, 2px 2px 2px #89a ;
+		}
+		
+		h1 {
+		  font-family: sans-serif;
+		  font-size: 1.3em;
+		}
+	
+		label {
+		  display: block;
+		  width: 200px;
+		  float: left;
+		  clear: left;
+		  text-align: right;
+		  margin-left: -1em;
+		}
+
+		#bitInfo {
+		  font-size: 0.7em;
+		  color:#666666;
+		  margin: 2em auto;
+		  width: 500px;
+		  padding: 1em;
+		}
+		select {
+		  margin-left: 1em;
+		  width: 150px;
+		  font-size: 0.8em;
+		}
+	
+		li {
+		  list-style-type: none;
+		}
+		  
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">	
+			<h1>QR Box - Prefrences</h1>
+			<form>
+				<ul>
+					<li>
+						<label for="colour">Bit.ly Username:</label>
+						<input type="text" name="bitName" id="bitName" />
+					</li>
+					<li>
+						<label for="font">Bit.ly API Key:</label>
+						<input type="text" name="bitKey" id="bitKey" />
+					</li>
+				</ul>
+			</form>
+		</div>
+		<div id="bitInfo">
+		To enable bit.ly shortened links input both a valid bit.ly username and API key.<br/>
+		Visit <a href="http://bit.ly/a/your_api_key">http://bit.ly/a/your_api_key</a> to register for a bit.ly account and API key.
+		</div>
+		<script>
+			var bitName = document.getElementById( 'bitName' ),
+			    bitKey = document.getElementById( 'bitKey' );
+		  
+			bitName.addEventListener( 'change', function() {
+				widget.preferences.bitName = this.value;	
+			}, false );
+		  
+			bitKey.addEventListener( 'change', function() {
+				widget.preferences.bitKey = this.value;
+			}, false );
+
+			if(widget.preferences.bitName){
+				bitName.value = widget.preferences.bitName;
+			}
+			if(widget.preferences.bitKey){
+				bitKey.value = widget.preferences.bitKey;
+			}
+		</script>
+	</body>
+</html>
