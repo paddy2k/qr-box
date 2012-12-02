@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget xmlns="http://www.w3.org/ns/widgets" id="https://addons.opera.com/addons/extensions/details/qr-box/" version="0.2.7" href="https://addons.opera.com/extensions/details/qr-box/">
+<widget xmlns="http://www.w3.org/ns/widgets" id="https://addons.opera.com/addons/extensions/details/qr-box/" version="0.3" href="https://addons.opera.com/extensions/details/qr-box/">
   <name>QR Box</name>
-  <access origin="http://chart.apis.google.com"/>
   <access origin="http://api.bit.ly"/>
   <icon src="images/icon_64.png"/>
   <update-description href="https://extension-updates.opera.com/api/w3c-wd1/update/5940bb18-e3d9-487e-be7a-0d84ff6c3879/"/>
