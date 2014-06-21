@@ -1,0 +1,16 @@
+{
+"name": "QR Box",
+"developer": {"name" : "paddy2k", "url" : "http://smallroomstudios.net/"},
+"description" : "Open the current page on any phone with a camera using a barcode scanner app",
+"manifest_version" : 2,
+"version" : "0.3",
+"background" : {"page" : "index.html"},
+"icons" : {"128": "images/icon_64.png"},
+"browser_action" : {},
+"options_page" : "options.html",
+"content_scripts": [
+{"js": ["oex_shim/operaextensions_injectedscript.js", "includes/all.js"], "matches": ["<all_urls>"], "include_globs": ["*"], "exclude_globs": [], "run_at": "document_start", "all_frames" : true}],
+"web_accessible_resources" : ["LICENSE.TXT","README.md","background.js","images/19-0.gif","images/gradient.png","images/icon.png","images/icon_64.png","includes/all.js","js/html5-qrcode.js","js/qrcode.js","mini.html","mini.js"],
+"permissions" : ["tabs", "https://*/*", "storage", "http://*/*"],
+"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'unsafe-eval';"
+}

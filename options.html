@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>QR Box - Prefrences</title>
-		
-		<style>
+<!DOCTYPE html><html><head><script src="oex_shim/operaextensions_popup.js"> </script> <title>QR Box - Prefrences</title> <style>
 		
 		#wrapper {
 		  margin: 2em auto;
@@ -45,46 +40,4 @@
 		  list-style-type: none;
 		}
 		  
-		</style>
-	</head>
-	<body>
-		<div id="wrapper">	
-			<h1>QR Box - Prefrences</h1>
-			<form>
-				<ul>
-					<li>
-						<label for="colour">Bit.ly Username:</label>
-						<input type="text" name="bitName" id="bitName" />
-					</li>
-					<li>
-						<label for="font">Bit.ly API Key:</label>
-						<input type="text" name="bitKey" id="bitKey" />
-					</li>
-				</ul>
-			</form>
-		</div>
-		<div id="bitInfo">
-		To enable bit.ly shortened links input both a valid bit.ly username and API key.<br/>
-		Visit <a href="http://bit.ly/a/your_api_key">http://bit.ly/a/your_api_key</a> to register for a bit.ly account and API key.
-		</div>
-		<script>
-			var bitName = document.getElementById( 'bitName' ),
-			    bitKey = document.getElementById( 'bitKey' );
-		  
-			bitName.addEventListener( 'change', function() {
-				widget.preferences.bitName = this.value;	
-			}, false );
-		  
-			bitKey.addEventListener( 'change', function() {
-				widget.preferences.bitKey = this.value;
-			}, false );
-
-			if(widget.preferences.bitName){
-				bitName.value = widget.preferences.bitName;
-			}
-			if(widget.preferences.bitKey){
-				bitKey.value = widget.preferences.bitKey;
-			}
-		</script>
-	</body>
-</html>
+		</style> </head> <body> <div id="wrapper"> <h1>QR Box - Prefrences</h1> <form> <ul> <li> <label for="colour">Bit.ly Username:</label> <input id="bitName" name="bitName" type="text" /> </li> <li> <label for="font">Bit.ly API Key:</label> <input id="bitKey" name="bitKey" type="text" /> </li> </ul> </form> </div> <div id="bitInfo"> To enable bit.ly shortened links input both a valid bit.ly username and API key.<br /> Visit <a href="http://bit.ly/a/your_api_key">http://bit.ly/a/your_api_key</a> to register for a bit.ly account and API key. </div> <script src="inline_script_option_1.js"></script>   </body></html>
